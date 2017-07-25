@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :condition %><br>
-    <%= f.text_field :condition %>
+    <%= f.select :condition, [ 'Undetermined ','Good','Fair','Serious','Crtitcal','Treated and Released','Confirming patient deaths' ], :prompt => 'Select One' %>
   </div>
   <div class="field">
     <%= f.label :appointment %><br>

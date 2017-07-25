@@ -15,3 +15,246 @@ Migrating to CreatePats (20170725170709)
   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170725170709"]]
   [1m[35m (8.1ms)[0m  commit transaction
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 83.136.45.59 at 2017-07-25 17:10:49 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 37ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pats" for 83.136.45.59 at 2017-07-25 17:10:58 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PatsController#index as HTML
+  [1m[35mPat Load (0.2ms)[0m  SELECT "pats".* FROM "pats"
+  Rendered pats/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 675ms (Views: 673.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 83.136.45.59 at 2017-07-25 17:10:59 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 83.136.45.59 at 2017-07-25 17:10:59 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 83.136.45.59 at 2017-07-25 17:10:59 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 83.136.45.59 at 2017-07-25 17:10:59 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/pats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 83.136.45.59 at 2017-07-25 17:10:59 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 83.136.45.59 at 2017-07-25 17:10:59 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/pats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 83.136.45.59 at 2017-07-25 17:10:59 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-d2e5ccad1506299feea3a35bfb7c525e101bb3b214303715deb675fdc539948b.css?body=1" for 83.136.45.59 at 2017-07-25 17:10:59 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/pats/new" for 83.136.45.59 at 2017-07-25 17:11:01 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PatsController#new as HTML
+  Rendered pats/_form.html.erb (73.3ms)
+  Rendered pats/new.html.erb within layouts/application (84.1ms)
+Completed 200 OK in 130ms (Views: 111.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/pats" for 83.136.45.59 at 2017-07-25 17:11:10 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PatsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lOm6vsJwkFKRk07gWnAPdSPW6Tu6ing6XhhLvio7RStsRcWqP92f2WlEe09MXb+AtbAjVRAKq/rA76CVPvUGtg==", "pat"=>{"name"=>"nil", "dob(1i)"=>"2017", "dob(2i)"=>"7", "dob(3i)"=>"25", "dob(4i)"=>"17", "dob(5i)"=>"11", "phone"=>"", "condition"=>"nil", "appointment(1i)"=>"2017", "appointment(2i)"=>"7", "appointment(3i)"=>"25", "appointment(4i)"=>"17", "appointment(5i)"=>"11"}, "commit"=>"Create Pat"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "pats" ("name", "condition", "dob", "appointment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "nil"], ["condition", "nil"], ["dob", "2017-07-25 17:11:00.000000"], ["appointment", "2017-07-25 17:11:00.000000"], ["created_at", "2017-07-25 17:11:10.400100"], ["updated_at", "2017-07-25 17:11:10.400100"]]
+  [1m[36m (5.5ms)[0m  [1mcommit transaction[0m
+Redirected to https://navjot-navsinghorg.c9users.io/pats/1
+Completed 302 Found in 22ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/pats/1" for 83.136.45.59 at 2017-07-25 17:11:10 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPat Load (0.2ms)[0m  SELECT  "pats".* FROM "pats" WHERE "pats"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered pats/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 19ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pats" for 83.136.45.59 at 2017-07-25 17:11:13 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PatsController#index as HTML
+  [1m[36mPat Load (0.2ms)[0m  [1mSELECT "pats".* FROM "pats"[0m
+  Rendered pats/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pats/new" for 83.136.45.59 at 2017-07-25 17:11:14 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PatsController#new as HTML
+  Rendered pats/_form.html.erb (8.5ms)
+  Rendered pats/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pats/new" for 83.136.45.59 at 2017-07-25 17:12:35 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PatsController#new as HTML
+  Rendered pats/_form.html.erb (15.4ms)
+  Rendered pats/new.html.erb within layouts/application (16.0ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `condtition' for #<Pat:0x007efd5470d3e0>
+Did you mean?  condition
+               condition=
+               condition?):
+    25:   </div>
+    26:   <div class="field">
+    27:     <%= f.label :condition %><br>
+    28:     <%= f.select :condtition, [ 'Undetermined ','Good','Fair','Serious','Crtitcal','Treated and Released','Confirming patient deaths' ], :prompt => 'Select One' %>
+    29:   </div>
+    30:   <div class="field">
+    31:     <%= f.label :appointment %><br>
+  app/views/pats/_form.html.erb:28:in `block in _app_views_pats__form_html_erb___4444556841804229427_69813254262720'
+  app/views/pats/_form.html.erb:1:in `_app_views_pats__form_html_erb___4444556841804229427_69813254262720'
+  app/views/pats/new.html.erb:3:in `_app_views_pats_new_html_erb__3797948115709612769_69813429064820'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.6ms)
+
+
+Started GET "/pats/new" for 83.136.45.59 at 2017-07-25 17:13:00 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PatsController#new as HTML
+  Rendered pats/_form.html.erb (7.1ms)
+  Rendered pats/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pats" for 83.136.45.59 at 2017-07-25 17:13:54 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PatsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"22StXW40WFj6AKpeCS5Uv4+dINQ7sZEWxEfpmNUxnZgjyNJJk5lX0wLXn/EfA+RKGfvqupExQtZasAKzwf/eBQ==", "pat"=>{"name"=>"", "dob(1i)"=>"2017", "dob(2i)"=>"7", "dob(3i)"=>"25", "dob(4i)"=>"17", "dob(5i)"=>"13", "phone"=>"", "condition"=>"Crtitcal", "appointment(1i)"=>"2017", "appointment(2i)"=>"7", "appointment(3i)"=>"25", "appointment(4i)"=>"17", "appointment(5i)"=>"13"}, "commit"=>"Create Pat"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mPat Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "pats" WHERE "pats"."appointment" = '2017-07-25 17:13:00.000000' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered pats/_form.html.erb (6.1ms)
+  Rendered pats/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 44ms (Views: 21.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/pats" for 83.136.45.59 at 2017-07-25 17:14:15 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PatsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"22StXW40WFj6AKpeCS5Uv4+dINQ7sZEWxEfpmNUxnZgjyNJJk5lX0wLXn/EfA+RKGfvqupExQtZasAKzwf/eBQ==", "pat"=>{"name"=>"nil", "dob(1i)"=>"2017", "dob(2i)"=>"7", "dob(3i)"=>"25", "dob(4i)"=>"17", "dob(5i)"=>"13", "phone"=>"112233", "condition"=>"Treated and Released", "appointment(1i)"=>"2017", "appointment(2i)"=>"7", "appointment(3i)"=>"25", "appointment(4i)"=>"17", "appointment(5i)"=>"13"}, "commit"=>"Create Pat"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mPat Exists (0.2ms)[0m  SELECT  1 AS one FROM "pats" WHERE "pats"."appointment" = '2017-07-25 17:13:00.000000' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "pats" ("name", "phone", "condition", "dob", "appointment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "nil"], ["phone", 112233], ["condition", "Treated and Released"], ["dob", "2017-07-25 17:13:00.000000"], ["appointment", "2017-07-25 17:13:00.000000"], ["created_at", "2017-07-25 17:14:15.795156"], ["updated_at", "2017-07-25 17:14:15.795156"]]
+  [1m[35m (7.7ms)[0m  commit transaction
+Redirected to https://navjot-navsinghorg.c9users.io/pats/2
+Completed 302 Found in 13ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/pats/2" for 83.136.45.59 at 2017-07-25 17:14:16 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPat Load (0.2ms)[0m  [1mSELECT  "pats".* FROM "pats" WHERE "pats"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pats/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pats" for 83.136.45.59 at 2017-07-25 17:14:18 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PatsController#index as HTML
+  [1m[35mPat Load (0.2ms)[0m  SELECT "pats".* FROM "pats"
+  Rendered pats/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pats/new" for 83.136.45.59 at 2017-07-25 17:14:19 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PatsController#new as HTML
+  Rendered pats/_form.html.erb (5.0ms)
+  Rendered pats/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 17ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pats" for 83.136.45.59 at 2017-07-25 17:14:31 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PatsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zPJ/0aE5Zmqa4ZfWoWMcRgAstLi3QhSJ+ygJN9m2Bdk0XgDFXJRp4WI2onm3Tqyzlkp+1h3Cx0ll3+IczXhGRA==", "pat"=>{"name"=>"nil", "dob(1i)"=>"2017", "dob(2i)"=>"7", "dob(3i)"=>"25", "dob(4i)"=>"17", "dob(5i)"=>"14", "phone"=>"111", "condition"=>"Treated and Released", "appointment(1i)"=>"2017", "appointment(2i)"=>"7", "appointment(3i)"=>"25", "appointment(4i)"=>"17", "appointment(5i)"=>"14"}, "commit"=>"Create Pat"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mPat Exists (0.2ms)[0m  SELECT  1 AS one FROM "pats" WHERE "pats"."appointment" = '2017-07-25 17:14:00.000000' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pats" ("name", "phone", "condition", "dob", "appointment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "nil"], ["phone", 111], ["condition", "Treated and Released"], ["dob", "2017-07-25 17:14:00.000000"], ["appointment", "2017-07-25 17:14:00.000000"], ["created_at", "2017-07-25 17:14:31.851176"], ["updated_at", "2017-07-25 17:14:31.851176"]]
+  [1m[35m (432.3ms)[0m  commit transaction
+Redirected to https://navjot-navsinghorg.c9users.io/pats/3
+Completed 302 Found in 449ms (ActiveRecord: 432.9ms)
+
+
+Started GET "/pats/3" for 83.136.45.59 at 2017-07-25 17:14:32 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PatsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPat Load (0.2ms)[0m  [1mSELECT  "pats".* FROM "pats" WHERE "pats"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered pats/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pats" for 83.136.45.59 at 2017-07-25 17:14:36 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PatsController#index as HTML
+  [1m[35mPat Load (0.2ms)[0m  SELECT "pats".* FROM "pats"
+  Rendered pats/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pats/new" for 83.136.45.59 at 2017-07-25 17:14:39 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PatsController#new as HTML
+  Rendered pats/_form.html.erb (6.3ms)
+  Rendered pats/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 19ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pats" for 83.136.45.59 at 2017-07-25 17:14:55 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PatsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tMOgxhYK3WvA42v/HRbB7V5pnLVGYwEU8sVzIl8tIvlMb9/S66fS4Dg0XlALO3EYyA9W2+zj0tRsMpgJS+NhZA==", "pat"=>{"name"=>"nil", "dob(1i)"=>"2017", "dob(2i)"=>"7", "dob(3i)"=>"25", "dob(4i)"=>"17", "dob(5i)"=>"14", "phone"=>"4", "condition"=>"", "appointment(1i)"=>"2017", "appointment(2i)"=>"7", "appointment(3i)"=>"25", "appointment(4i)"=>"17", "appointment(5i)"=>"14"}, "commit"=>"Create Pat"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mPat Exists (0.2ms)[0m  SELECT  1 AS one FROM "pats" WHERE "pats"."appointment" = '2017-07-25 17:14:00.000000' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered pats/_form.html.erb (7.0ms)
+  Rendered pats/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 24ms (Views: 19.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 83.136.45.59 at 2017-07-25 17:17:11 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PatsController#index as HTML
+  [1m[35mPat Load (0.3ms)[0m  SELECT "pats".* FROM "pats"
+  Rendered pats/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 24ms (Views: 20.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 83.136.45.59 at 2017-07-25 17:17:30 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PatsController#new as HTML
+  Rendered pats/_form.html.erb (6.1ms)
+  Rendered pats/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 28ms (Views: 20.8ms | ActiveRecord: 0.5ms)
