@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+
+<%= form_tag(pats_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search patients on basis of name" %>
+    <%= submit_tag "Search", :name => nil %>
+<% end %>
+
 <h1>Listing Pats</h1>
 
 <table>

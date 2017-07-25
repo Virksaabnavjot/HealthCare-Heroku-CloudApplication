@@ -7,6 +7,16 @@ class PatsController < ApplicationController
   def index
     @pats = Pat.all
   end
+  
+  def index
+@pats = Pat.all
+  if params[:search]
+    @pats = Pat.search(params[:search]).order("created_at DESC")
+  else
+    @pats = Pat.all.order("created_at DESC")
+  end
+end
+  
 
   # GET /pats/1
   # GET /pats/1.json
