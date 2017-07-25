@@ -16,6 +16,16 @@ class DoctorsController < ApplicationController
   def new
     @doctor = Doctor.new
   end
+  
+  def new
+@doctor = Doctor.new
+@doctor.user_id = current_user.id
+respond_to do |format|
+format.html # new.html.erb
+format.json { render json: @doctor }
+end
+end
+  
 
   # GET /doctors/1/edit
   def edit
@@ -60,6 +70,16 @@ class DoctorsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def signedinuserdoctor
+doctor = Doctor.find_by_user_id(current_user.id)
+if doctor.nil?
+redirect_to "/doctors/new"
+else
+@doctor = Doctor.find_by_user_id(current_user.id)
+redirect_to "/doctors/#{@doctor.id}"
+end
+end
 
   private
     # Use callbacks to share common setup or constraints between actions.
