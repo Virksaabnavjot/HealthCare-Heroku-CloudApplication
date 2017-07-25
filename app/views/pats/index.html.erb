@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Dob</th>
+      <th>Phone</th>
+      <th>Condition</th>
+      <th>Appointment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pats.each do |pat| %>
+      <tr>
+        <td><%= pat.name %></td>
+        <td><%= pat.dob %></td>
+        <td><%= pat.phone %></td>
+        <td><%= pat.condition %></td>
+        <td><%= pat.appointment %></td>
+        <td><%= link_to 'Show', pat %></td>
+        <td><%= link_to 'Edit', edit_pat_path(pat) %></td>
+        <td><%= link_to 'Destroy', pat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pat', new_pat_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  dob: 2017-07-25 17:07:09
+  phone: 1
+  condition: MyString
+  appointment: 2017-07-25 17:07:09
+
+two:
+  name: MyString
+  dob: 2017-07-25 17:07:09
+  phone: 1
+  condition: MyString
+  appointment: 2017-07-25 17:07:09
