@@ -1,5 +1,6 @@
 class PatsController < ApplicationController
   before_action :set_pat, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
 
   # GET /pats
   # GET /pats.json

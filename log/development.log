@@ -292,3 +292,73 @@ Migrating to DeviseCreateUsers (20170725174620)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 
+
+
+Started GET "/" for 83.136.45.59 at 2017-07-25 17:51:25 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PatsController#new as HTML
+Completed 401 Unauthorized in 16ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 83.136.45.59 at 2017-07-25 17:51:26 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (8.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (34.5ms)
+Completed 200 OK in 305ms (Views: 296.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_up" for 83.136.45.59 at 2017-07-25 17:51:52 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (3.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 83.136.45.59 at 2017-07-25 17:52:16 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZHhvWZO5T4Z52Jqq9zQIVU7OACo395HpPBmYALGguKec1BBNbhRADYEPrwXhGbig2KjKRJ13Qimi7nMrpW77Og==", "user"=>{"email"=>"sha@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'sha@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "sha@gmail.com"], ["encrypted_password", "$2a$11$QZbQPDqYixkof7iJ.I/TiONPfjRMVf754y60b48ujfnPVpYB3XtWS"], ["created_at", "2017-07-25 17:52:16.379090"], ["updated_at", "2017-07-25 17:52:16.379090"]]
+  [1m[36m (11.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2017-07-25 17:52:16.394951"], ["current_sign_in_at", "2017-07-25 17:52:16.394951"], ["last_sign_in_ip", "83.136.45.59"], ["current_sign_in_ip", "83.136.45.59"], ["sign_in_count", 1], ["updated_at", "2017-07-25 17:52:16.396662"], ["id", 1]]
+  [1m[35m (9.0ms)[0m  commit transaction
+Redirected to https://navjot-navsinghorg.c9users.io/
+Completed 302 Found in 224ms (ActiveRecord: 21.9ms)
+
+
+Started GET "/" for 83.136.45.59 at 2017-07-25 17:52:20 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PatsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered pats/_form.html.erb (27.2ms)
+  Rendered pats/new.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 69ms (Views: 48.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/pats" for 83.136.45.59 at 2017-07-25 17:52:45 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PatsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"huaMBzzNmSE41dj3ggM9mFYBuRM7zP0hLjorwRojIvJ+SvMTwWCWqsAC7ViULo1twGdzfZFMLuGwzcDqDu1hbw==", "pat"=>{"name"=>"nil", "dob(1i)"=>"2017", "dob(2i)"=>"7", "dob(3i)"=>"25", "dob(4i)"=>"17", "dob(5i)"=>"52", "phone"=>"1223333", "condition"=>"Serious", "appointment(1i)"=>"2017", "appointment(2i)"=>"7", "appointment(3i)"=>"25", "appointment(4i)"=>"17", "appointment(5i)"=>"52"}, "commit"=>"Create Pat"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mPat Exists (0.2ms)[0m  SELECT  1 AS one FROM "pats" WHERE "pats"."appointment" = '2017-07-25 17:52:00.000000' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pats" ("name", "phone", "condition", "dob", "appointment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "nil"], ["phone", 1223333], ["condition", "Serious"], ["dob", "2017-07-25 17:52:00.000000"], ["appointment", "2017-07-25 17:52:00.000000"], ["created_at", "2017-07-25 17:52:45.972161"], ["updated_at", "2017-07-25 17:52:45.972161"]]
+  [1m[35m (10.3ms)[0m  commit transaction
+Redirected to https://navjot-navsinghorg.c9users.io/pats/4
+Completed 302 Found in 21ms (ActiveRecord: 10.9ms)
+
+
+Started GET "/pats/4" for 83.136.45.59 at 2017-07-25 17:52:46 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PatsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPat Load (0.3ms)[0m  [1mSELECT  "pats".* FROM "pats" WHERE "pats"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered pats/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 23ms (Views: 17.9ms | ActiveRecord: 0.4ms)
