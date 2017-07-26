@@ -10,6 +10,9 @@
       </ul>
     </div>
   <% end %>
+  
+  
+
 
   <div class="field">
     <%= f.label :firstname %><br>
@@ -35,6 +38,26 @@
     <%= f.label :color %><br>
     <%= f.text_field :color %>
   </div>
+  
+     <div class="field">
+     X ray:
+     <%= check_box_tag 'shift[windows]', 'windows' %>
+</div>
+     <div class="field">
+     Ct scan:
+     <%= check_box_tag 'shift[ctscan]', 'ctscan' %>
+</div>
+
+     <div class="field">
+     Endoscopy :
+     <%= check_box_tag 'shift[endoscopy]', 'endoscopy' %>
+</div>
+
+       <div class="field">
+     Do you have a medical card? :
+     <%= check_box_tag 'shift[card]', 'card' %>
+</div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>
