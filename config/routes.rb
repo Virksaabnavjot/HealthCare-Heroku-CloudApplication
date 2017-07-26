@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :transfers
   resources :doctors
   devise_for :users
   resources :pats

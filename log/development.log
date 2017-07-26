@@ -909,3 +909,203 @@ Migrating to CreateTransfers (20170726163250)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+
+
+Started GET "/transfers" for 83.136.45.59 at 2017-07-26 16:39:58 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TransfersController#index as HTML
+  [1m[35mTransfer Load (0.3ms)[0m  SELECT "transfers".* FROM "transfers"
+  Rendered transfers/index.html.erb within layouts/application (5.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 591ms (Views: 552.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/transfers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 83.136.45.59 at 2017-07-26 16:39:59 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/transfers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 83.136.45.59 at 2017-07-26 16:39:59 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/transfers/new" for 83.136.45.59 at 2017-07-26 16:40:05 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransfersController#new as HTML
+  Rendered transfers/_form.html.erb (62.1ms)
+  Rendered transfers/new.html.erb within layouts/application (71.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 131ms (Views: 107.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/transfers/new" for 83.136.45.59 at 2017-07-26 16:59:15 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransfersController#new as HTML
+  Rendered transfers/_form.html.erb (3.3ms)
+  Rendered transfers/new.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 138ms (Views: 129.9ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/transfers" for 83.136.45.59 at 2017-07-26 17:00:11 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransfersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dNt15+eYm1sPcHyCL5VIJYGVwmhhg3Lp04j8VEJLcXzfMPknjfPpPM+Z4flZyNrOosCD+vgD4mcAYSqIHZaccQ==", "transfer"=>{"firstname"=>"", "lastname"=>"", "firm"=>"", "cost"=>"", "detail"=>"", "age"=>"", "xray"=>"xray"}, "commit"=>"Create Transfer"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `color=' for #<Transfer:0x007f5dbe871a40>):
+  app/controllers/transfers_controller.rb:33:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.6ms)
+
+
+Started POST "/transfers" for 83.136.45.59 at 2017-07-26 17:01:32 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransfersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dNt15+eYm1sPcHyCL5VIJYGVwmhhg3Lp04j8VEJLcXzfMPknjfPpPM+Z4flZyNrOosCD+vgD4mcAYSqIHZaccQ==", "transfer"=>{"firstname"=>"", "lastname"=>"", "firm"=>"", "cost"=>"", "detail"=>"", "age"=>"", "xray"=>"xray"}, "commit"=>"Create Transfer"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.6ms)
+
+TypeError (no implicit conversion of nil into String):
+  lib/transfer_decorator.rb:17:in `+'
+  lib/transfer_decorator.rb:17:in `details'
+  lib/transfer_decorator.rb:52:in `details'
+  app/controllers/transfers_controller.rb:44:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.6ms)
+
+
+Started POST "/transfers" for 83.136.45.59 at 2017-07-26 17:02:18 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransfersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dNt15+eYm1sPcHyCL5VIJYGVwmhhg3Lp04j8VEJLcXzfMPknjfPpPM+Z4flZyNrOosCD+vgD4mcAYSqIHZaccQ==", "transfer"=>{"firstname"=>"", "lastname"=>"", "firm"=>"", "cost"=>"", "detail"=>"", "age"=>"", "xray"=>"xray"}, "commit"=>"Create Transfer"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.7ms)
+
+TypeError (no implicit conversion of nil into String):
+  lib/transfer_decorator.rb:17:in `+'
+  lib/transfer_decorator.rb:17:in `details'
+  lib/transfer_decorator.rb:52:in `details'
+  app/controllers/transfers_controller.rb:44:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.7ms)
+
+
+Started POST "/transfers" for 83.136.45.59 at 2017-07-26 17:03:59 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransfersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dNt15+eYm1sPcHyCL5VIJYGVwmhhg3Lp04j8VEJLcXzfMPknjfPpPM+Z4flZyNrOosCD+vgD4mcAYSqIHZaccQ==", "transfer"=>{"firstname"=>"", "lastname"=>"", "firm"=>"", "cost"=>"", "detail"=>"", "age"=>"", "xray"=>"xray"}, "commit"=>"Create Transfer"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+TypeError (no implicit conversion of nil into String):
+  lib/transfer_decorator.rb:17:in `+'
+  lib/transfer_decorator.rb:17:in `details'
+  lib/transfer_decorator.rb:52:in `details'
+  app/controllers/transfers_controller.rb:44:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.4ms)
+
+
+Started POST "/transfers" for 83.136.45.59 at 2017-07-26 17:05:54 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransfersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dNt15+eYm1sPcHyCL5VIJYGVwmhhg3Lp04j8VEJLcXzfMPknjfPpPM+Z4flZyNrOosCD+vgD4mcAYSqIHZaccQ==", "transfer"=>{"firstname"=>"", "lastname"=>"", "firm"=>"", "cost"=>"", "detail"=>"", "age"=>"", "xray"=>"xray"}, "commit"=>"Create Transfer"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.9ms)
+
+NoMethodError (undefined method `detail' for #<XrayDecorator:0x007f5dbe4d87d0>
+Did you mean?  details):
+  app/controllers/transfers_controller.rb:44:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.1ms)
+
+
+Started POST "/transfers" for 83.136.45.59 at 2017-07-26 17:08:04 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransfersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dNt15+eYm1sPcHyCL5VIJYGVwmhhg3Lp04j8VEJLcXzfMPknjfPpPM+Z4flZyNrOosCD+vgD4mcAYSqIHZaccQ==", "transfer"=>{"firstname"=>"", "lastname"=>"", "firm"=>"", "cost"=>"", "detail"=>"", "age"=>"", "xray"=>"xray"}, "commit"=>"Create Transfer"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.7ms)
+
+TypeError (no implicit conversion of nil into String):
+  lib/transfer_decorator.rb:17:in `+'
+  lib/transfer_decorator.rb:17:in `details'
+  lib/transfer_decorator.rb:52:in `details'
+  app/controllers/transfers_controller.rb:44:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.1ms)
+
+
+Started POST "/transfers" for 83.136.45.59 at 2017-07-26 17:13:00 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransfersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dNt15+eYm1sPcHyCL5VIJYGVwmhhg3Lp04j8VEJLcXzfMPknjfPpPM+Z4flZyNrOosCD+vgD4mcAYSqIHZaccQ==", "transfer"=>{"firstname"=>"", "lastname"=>"", "firm"=>"", "cost"=>"", "detail"=>"", "age"=>"", "xray"=>"xray"}, "commit"=>"Create Transfer"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+TypeError (no implicit conversion of nil into String):
+  lib/transfer_decorator.rb:17:in `+'
+  lib/transfer_decorator.rb:17:in `details'
+  lib/transfer_decorator.rb:52:in `details'
+  app/controllers/transfers_controller.rb:44:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.0ms)
+
+
+Started POST "/transfers" for 83.136.45.59 at 2017-07-26 17:14:00 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TransfersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dNt15+eYm1sPcHyCL5VIJYGVwmhhg3Lp04j8VEJLcXzfMPknjfPpPM+Z4flZyNrOosCD+vgD4mcAYSqIHZaccQ==", "transfer"=>{"firstname"=>"", "lastname"=>"", "firm"=>"", "cost"=>"", "detail"=>"", "age"=>"", "xray"=>"xray"}, "commit"=>"Create Transfer"}
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.4ms)
+
+NoMethodError (undefined method `details' for #<XrayDecorator:0x00000003ad1c38>):
+  app/controllers/transfers_controller.rb:44:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.0ms)
+
+
+Started POST "/transfers" for 83.136.45.59 at 2017-07-26 17:14:38 +0000
+Cannot render console from 83.136.45.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TransfersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dNt15+eYm1sPcHyCL5VIJYGVwmhhg3Lp04j8VEJLcXzfMPknjfPpPM+Z4flZyNrOosCD+vgD4mcAYSqIHZaccQ==", "transfer"=>{"firstname"=>"", "lastname"=>"", "firm"=>"", "cost"=>"", "detail"=>"", "age"=>"", "xray"=>"xray"}, "commit"=>"Create Transfer"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.6ms)
+
+TypeError (no implicit conversion of nil into String):
+  lib/transfer_decorator.rb:17:in `+'
+  lib/transfer_decorator.rb:17:in `descriptions'
+  lib/transfer_decorator.rb:53:in `descriptions'
+  app/controllers/transfers_controller.rb:44:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.2ms)
