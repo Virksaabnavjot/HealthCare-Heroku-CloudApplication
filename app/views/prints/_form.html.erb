@@ -17,17 +17,18 @@
   </div>
   <div class="field">
     <%= f.label :case %><br>
-    <%= f.text_field :case %>
+    <%= f.select :case, [ 'Undetermined ','Good','Fair','Serious','Crtitcal','Treated and Released','Confirming patient deaths' ], :prompt => 'Select One' %>
+
   </div>
   <div class="field">
     <%= f.label :prescription %><br>
     <%= f.text_field :prescription %>
   </div>
   <div class="field">
-    <%= f.label :published %><br>
+    <%= f.label :date %><br>
     <%= f.date_select :published %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Register' %>
   </div>
 <% end %>

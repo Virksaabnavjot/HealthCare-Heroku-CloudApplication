@@ -28,7 +28,7 @@ class PrintsController < ApplicationController
 
     respond_to do |format|
       if @print.save
-        format.html { redirect_to @print, notice: 'Print was successfully created.' }
+        format.html { redirect_to @print, notice: 'Print record created.' }
         format.json { render :show, status: :created, location: @print }
       else
         format.html { render :new }
