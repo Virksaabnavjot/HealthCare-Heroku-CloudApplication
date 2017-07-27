@@ -1,6 +1,7 @@
 class PatsController < ApplicationController
   before_action :set_pat, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
+  #helper_method :sort_direction
 
   # GET /pats
   # GET /pats.json
@@ -15,6 +16,13 @@ class PatsController < ApplicationController
   else
     @pats = Pat.all.order("created_at DESC")
   end
+#  if params[:sort] == 'name'
+ #     @pats = Pat.all.order("form_name #{sort_direction}")
+  #  elsif params[:sort] == 'created_at'
+   #   @pats = Pat.all.order("created_at #{sort_direction}")
+    #else
+     # @pats = Pat.all
+    #end
 end
   
 
@@ -77,6 +85,7 @@ end
     def set_pat
       @pat = Pat.find(params[:id])
     end
+   
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pat_params
