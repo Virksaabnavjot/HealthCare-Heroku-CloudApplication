@@ -1,0 +1,33 @@
+<%= form_for(@print) do |f| %>
+  <% if @print.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@print.errors.count, "error") %> prohibited this print from being saved:</h2>
+
+      <ul>
+      <% @print.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :case %><br>
+    <%= f.text_field :case %>
+  </div>
+  <div class="field">
+    <%= f.label :prescription %><br>
+    <%= f.text_field :prescription %>
+  </div>
+  <div class="field">
+    <%= f.label :published %><br>
+    <%= f.date_select :published %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

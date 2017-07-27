@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  case: MyString
+  prescription: MyString
+  published: 2017-07-27
+
+two:
+  name: MyString
+  case: MyString
+  prescription: MyString
+  published: 2017-07-27

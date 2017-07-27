@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :prints
   resources :shifts
   resources :doctors
   devise_for :users
