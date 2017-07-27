@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  <%= image_tag('img1.jpg', style: "height: 260px; width: 1200px") %>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "MediApp" %></title>
@@ -9,6 +10,7 @@
     <%= javascript_include_tag :defaults %>
     <%= csrf_meta_tags %>
   </head>
+  
   <body>
     
     <header>
@@ -34,7 +36,7 @@
 <p class="alert"><%= alert %></p>
     </main>
   </body>
-  
-   <%= image_tag('img1.jpg', style: "height: 450px; width: 1400px") %>
+  <%= image_tag('img2.jpg', style: "height: 600px; width: 1200px") %>
+   
 </html>
 

@@ -3,14 +3,14 @@
  */
 main {
   border: 1px solid #d4d4d4;
-  background-image: linear-gradient(to bottom, white, #dafbfb );
+  background-image: linear-gradient(to bottom, white, #f1fdfd );
   background-color: #ded6d3;
   padding-bottom: 80px;
   width: 100%;
   }
 header {
   border: 1px solid #d4d4d4;
-  background-image: linear-gradient(to bottom, white, #dafbfb);
+  background-image: linear-gradient(to bottom, white, #f1fdfd);
   background-color: #f9f9f9;
   -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
