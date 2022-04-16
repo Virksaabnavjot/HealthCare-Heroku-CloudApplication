@@ -15,3 +15,7 @@ SHC-PMS is an information system that is intended for use in various clinics/ ce
 	that visited the clinic/ centre.
 	
 	• Extra functionalities that makes this web application more attractive product for the doctors/ consultants chosen by you.
+	
+	
+	
+	Copyrights - Navjot Singh Virk (https://navjot.mrvirk.com & https://mrvirk.com)
